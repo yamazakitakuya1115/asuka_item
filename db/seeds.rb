@@ -360,7 +360,7 @@ def fuumaseki
   Item.create(buy: 100000, sell: 50000, kind: "fuumaseki", name: "風魔石")
 end
 
-tue
+# tue
 # tubo
 # kusa
 # udewa
@@ -370,4 +370,4 @@ tue
 # ya
 # tama
 # onigiri
-# fuumaseki
+fuumaseki
