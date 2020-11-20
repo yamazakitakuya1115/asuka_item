@@ -14,52 +14,42 @@
     <div class="items">
       <%= "#{@price}ギタンで購入できるアイテム" %>
     </div>
-    <% if @buys.exists? %>
-      <% @buys.each do |buy| %>
+    <% if @kusa_buys %>
+      <% @kusa_buys.each do |buy| %>
         <div class="item-img">
-          <%= image_tag 'kusa.png', class: "item-img" if buy.kind == "kusa" %>
-          <%= image_tag 'udewa.png', class: "item-img" if buy.kind == "udewa" %>
-          <%= image_tag 'makimono.png', class: "item-img" if buy.kind == "makimono" %>
-          <%= image_tag 'onigiri.png', class: "item-img" if buy.kind == "onigiri" %>
-          <%= image_tag 'tue.png', class: "item-img" if buy.kind == "tue" %>
-          <%= image_tag 'tubo.png', class: "item-img" if buy.kind == "tubo" %>
-          <%= image_tag 'buki.png', class: "item-img" if buy.kind == "buki" %>
-          <%= image_tag 'tate.png', class: "item-img" if buy.kind == "tate" %>
-          <%= image_tag 'ya.png', class: "item-img" if buy.kind == "ya" %>
-          <%= image_tag 'tama.png', class: "item-img" if buy.kind == "tama" %>
-          <%= image_tag 'ishi.png', class: "item-img" if buy.kind == "ishi" %>
-          <%= image_tag 'fuumaseki.png', class: "item-img" if buy.kind == "fuumaseki" %>
+          <%= image_tag 'kusa.png', class: "item-img"%>
           <%= buy.name %>
         </div>
       <% end %>
-    <% else %>
-      なし
+    <% end %>
+    <% if @tue_buys %>
+      <% @tue_buys.each do |buy| %>
+        <div class="item-img">
+          <%= image_tag 'tue.png', class: "item-img"%>
+          <%= buy.name %>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <div class="items-sell">
     <div class="items">
       <%= "#{@price}ギタンで売却できるアイテム" %>
     </div>
-    <% if @sells.exists? %>
-      <% @sells.each do |sell| %>
+    <% if @kusa_sells %>
+      <% @kusa_sells.each do |sell| %>
         <div>
-          <%= image_tag 'kusa.png', class: "item-img" if sell.kind == "kusa" %>
-          <%= image_tag 'udewa.png', class: "item-img" if sell.kind == "udewa" %>
-          <%= image_tag 'makimono.png', class: "item-img" if sell.kind == "makimono" %>
-          <%= image_tag 'onigiri.png', class: "item-img" if sell.kind == "onigiri" %>
-          <%= image_tag 'tue.png', class: "item-img" if sell.kind == "tue" %>
-          <%= image_tag 'tubo.png', class: "item-img" if sell.kind == "tubo" %>
-          <%= image_tag 'buki.png', class: "item-img" if sell.kind == "buki" %>
-          <%= image_tag 'tate.png', class: "item-img" if sell.kind == "tate" %>
-          <%= image_tag 'ya.png', class: "item-img" if sell.kind == "ya" %>
-          <%= image_tag 'tama.png', class: "item-img" if sell.kind == "tama" %>
-          <%= image_tag 'ishi.png', class: "item-img" if sell.kind == "ishi" %>
-          <%= image_tag 'fuumaseki.png' if sell.kind == "fuumaseki" %>
+          <%= image_tag 'kusa.png', class: "item-img" %>
           <%= sell.name %>
         </div>
       <% end %>
-    <% else %>
-      なし
+    <% end %>
+    <% if @tue_sells %>
+      <% @tue_sells.each do |sell| %>
+        <div>
+          <%= image_tag 'tue.png', class: "item-img" %>
+          <%= sell.name %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
@@ -69,3 +59,4 @@
 <div>
   値段が違っている等、何かあれば<%= link_to '@hukudabe', 'https://twitter.com/hukudabe', target: :_blank, class: "link" %>まで
 </div>
+<%= link_to "csvで出力する", search_path(format: :csv) %>
