@@ -1,22 +1,57 @@
+body {
+  padding: 10px 20px;
+  background-image: image-url('asuka.png');
+	background-position: right 0 top 0;
+  background-repeat: no-repeat;
+  min-height: 400px;
+}
+
+.item-shikibetsu {
+  display: flex;
+}
+
+.item-price {
+  width: 10vw;
+  min-width: 300px;
+  font-size: 26px;
+  height: 40px;
+  border: solid 1px gray;
+}
+
+.item-search {
+  width: 100px;
+  height: 42px;
+  font-size: 26px;
+  color: white;
+  background-color: rgb(53, 100, 255);
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
 .items-buy {
   background-color: rgb(255, 214, 221);
-  margin: 20px;
+  margin: 10px;
   padding: 10px 20px;
 }
 
 .items-sell {
   background-color: rgb(223, 247, 255);
-  margin: 20px;
+  margin: 10px;
   padding: 10px 20px;
 }
 
 .items-none {
   background-color: lightgray;
-  margin: 20px;
+  margin: 10px;
   padding: 10px 20px;
+  width: 60vw;
 }
 
 .items {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.item-img {
 }

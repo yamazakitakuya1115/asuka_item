@@ -1,54 +1,56 @@
+<div class="back-asuka">
+</div>
+<div class="top">
 <h1>アスカ見参 値段識別</h1>
 
 <%= form_with(url: search_path, local: true, method: :get, autocomplete: 'off') do |form| %>
-  <%= form.text_field :price, placeholder: "値段検索", autofocus: true, autocomplete: 'off'%>
-  <%= form.submit "検索" %>
+  <%= form.text_field :price, placeholder: "値段入力（半角数字）",class: "item-price", autofocus: true, autocomplete: 'off'%>
+  <%= form.submit "識別", class: "item-search" %>
 <% end %>
-<div>
+<div class="item-shikibetsu">
   <% if @buys.exists? %>
     <div class="items-buy">
       <div class="items">
-        <%= "#{@price}ギタンで売られているアイテム" %>
+        <%= "#{@price}ギタンで購入できるアイテム" %>
       </div>
       <% @buys.each do |buy| %>
         <div>
-          <%= "□ " if buy.kind == "kusa" %>
-          <%= "■ " if buy.kind == "udewa" %>
-          <%= "○ " if buy.kind == "makimono" %>
-          <%= "● " if buy.kind == "onigiri" %>
-          <%= "☆ " if buy.kind == "tue" %>
-          <%= "★ " if buy.kind == "tubo" %>
-          <%= "△ " if buy.kind == "buki" %>
-          <%= "▲ " if buy.kind == "tate" %>
-          <%= "▽ " if buy.kind == "ya" %>
-          <%= "▼ " if buy.kind == "tama" %>
-          <%= "＃ " if buy.kind == "ishi" %>
-          <%= "＊ " if buy.kind == "fuumaseki" %>
+          <%= image_tag 'kusa.png', class: "item-img" if buy.kind == "kusa" %>
+          <%= image_tag 'udewa.png', class: "item-img" if buy.kind == "udewa" %>
+          <%= image_tag 'makimono.png', class: "item-img" if buy.kind == "makimono" %>
+          <%= image_tag 'onigiri.png', class: "item-img" if buy.kind == "onigiri" %>
+          <%= image_tag 'tue.png', class: "item-img" if buy.kind == "tue" %>
+          <%= image_tag 'tubo.png', class: "item-img" if buy.kind == "tubo" %>
+          <%= image_tag 'buki.png', class: "item-img" if buy.kind == "buki" %>
+          <%= image_tag 'tate.png', class: "item-img" if buy.kind == "tate" %>
+          <%= image_tag 'ya.png', class: "item-img" if buy.kind == "ya" %>
+          <%= image_tag 'tama.png', class: "item-img" if buy.kind == "tama" %>
+          <%= image_tag 'ishi.png', class: "item-img" if buy.kind == "ishi" %>
+          <%= image_tag 'fuumaseki.png', class: "item-img" if buy.kind == "fuumaseki" %>
           <%= buy.name %>
         </div>
       <% end %>
     </div>
-  </div>
   <% end %>
   <% if @sells.exists? %>
     <div class="items-sell">
       <div class="items">
-        <%= "#{@price}ギタンで売れるアイテム" %>
+        <%= "#{@price}ギタンで売却できるアイテム" %>
       </div>
       <% @sells.each do |sell| %>
       <div>
-          <%= "□ " if sell.kind == "kusa" %>
-          <%= "■ " if sell.kind == "udewa" %>
-          <%= "○ " if sell.kind == "makimono" %>
-          <%= "● " if sell.kind == "onigiri" %>
-          <%= "☆ " if sell.kind == "tue" %>
-          <%= "★ " if sell.kind == "tubo" %>
-          <%= "△ " if sell.kind == "buki" %>
-          <%= "▲ " if sell.kind == "tate" %>
-          <%= "▽ " if sell.kind == "ya" %>
-          <%= "▼ " if sell.kind == "tama" %>
-          <%= "＃ " if sell.kind == "ishi" %>
-          <%= "＊ " if sell.kind == "fuumaseki" %>
+          <%= image_tag 'kusa.png', class: "item-img" if sell.kind == "kusa" %>
+          <%= image_tag 'udewa.png', class: "item-img" if sell.kind == "udewa" %>
+          <%= image_tag 'makimono.png', class: "item-img" if sell.kind == "makimono" %>
+          <%= image_tag 'onigiri.png', class: "item-img" if sell.kind == "onigiri" %>
+          <%= image_tag 'tue.png', class: "item-img" if sell.kind == "tue" %>
+          <%= image_tag 'tubo.png', class: "item-img" if sell.kind == "tubo" %>
+          <%= image_tag 'buki.png', class: "item-img" if sell.kind == "buki" %>
+          <%= image_tag 'tate.png', class: "item-img" if sell.kind == "tate" %>
+          <%= image_tag 'ya.png', class: "item-img" if sell.kind == "ya" %>
+          <%= image_tag 'tama.png', class: "item-img" if sell.kind == "tama" %>
+          <%= image_tag 'ishi.png', class: "item-img" if sell.kind == "ishi" %>
+          <%= image_tag 'fuumaseki.png' if sell.kind == "fuumaseki" %>
         <%= sell.name %>
       </div>
       <% end %>
@@ -64,3 +66,4 @@
 </div>
 <div>
   ※エレキ箱、回路、秘技書は除く
+  </div>

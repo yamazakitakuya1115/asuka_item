@@ -4,5 +4,8 @@ class ItemsController < ApplicationController
     @price = params[:price]
     @buys = Item.buy(params[:price].to_i)
     @sells = Item.sell(params[:price].to_i)
+    if @price == ""
+      @price = 0
+    end
   end
 end

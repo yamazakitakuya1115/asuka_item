@@ -360,14 +360,14 @@ def fuumaseki
   Item.create(buy: 100000, sell: 50000, kind: "fuumaseki", name: "風魔石")
 end
 
+tue
+tubo
 kusa
 udewa
 makimono
-onigiri
-tue
-tubo
 buki
 tate
 ya
 tama
+onigiri
 fuumaseki
