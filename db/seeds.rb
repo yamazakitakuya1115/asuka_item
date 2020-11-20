@@ -361,13 +361,13 @@ def fuumaseki
 end
 
 tue
-tubo
-kusa
-udewa
-makimono
-buki
-tate
-ya
-tama
-onigiri
-fuumaseki
+# tubo
+# kusa
+# udewa
+# makimono
+# buki
+# tate
+# ya
+# tama
+# onigiri
+# fuumaseki
