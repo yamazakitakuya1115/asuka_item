@@ -11,6 +11,11 @@ body {
   text-decoration: none;
 }
 
+.title:hover {
+  color: black;
+  text-decoration: none;
+}
+
 a {
   color: rgb(57, 171, 209);
   text-decoration: none;
@@ -38,7 +43,7 @@ a:hover {
 
 .item-search {
   width: 100px;
-  height: 42px;
+  height: 46px;
   font-size: 26px;
   color: white;
   background-color: rgb(53, 100, 255);
@@ -70,7 +75,8 @@ a:hover {
   background-color: lightgray;
   margin: 10px;
   padding: 10px 20px;
-  width: 60vw;
+  width: 30vw;
+  min-width: 400px;
   border-radius: 15px;
 }
 
@@ -79,5 +85,6 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.item-img {
+.link {
+  font-weight: bold;
 }
