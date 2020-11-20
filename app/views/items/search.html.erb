@@ -1,7 +1,9 @@
 <div class="back-asuka">
 </div>
 <div class="top">
-<h1>アスカ見参 値段識別</h1>
+<h1>
+  <%= link_to 'アスカ見参 値段識別', root_path, class: "title" %>
+</h1>
 
 <%= form_with(url: search_path, local: true, method: :get, autocomplete: 'off') do |form| %>
   <%= form.text_field :price, placeholder: "値段入力（半角数字）",class: "item-price", autofocus: true, autocomplete: 'off'%>
@@ -68,5 +70,5 @@
   ※エレキ箱、回路、秘技書は除く
 </div>
 <div>
-  値段が違っている等、何かあれば<%= link_to '@hukudabe', 'https://twitter.com/hukudabe' %>まで
+  値段が違っている等、何かあれば<%= link_to '@hukudabe', 'https://twitter.com/hukudabe', target: :_blank %>まで
 </div>

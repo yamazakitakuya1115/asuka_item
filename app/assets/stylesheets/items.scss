@@ -6,6 +6,21 @@ body {
   min-height: 400px;
 }
 
+.title {
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  color: rgb(57, 171, 209);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(143, 227, 255);
+  text-decoration: underline;
+}
+
 .item-shikibetsu {
   display: flex;
   margin-top: 20px;
@@ -16,7 +31,9 @@ body {
   min-width: 300px;
   font-size: 26px;
   height: 40px;
-  border: solid 1px gray;
+  border: solid 2px gray;
+  padding-left: 10px;
+  border-radius: 15px;
 }
 
 .item-search {
@@ -28,18 +45,25 @@ body {
   border: none;
   cursor: pointer;
   z-index: 100;
+  border-radius: 15px;
+}
+
+.item-search:hover{
+  background-color: rgb(101, 137, 255);
 }
 
 .items-buy {
   background-color: rgb(255, 214, 221);
   margin: 10px;
   padding: 10px 20px;
+  border-radius: 15px;
 }
 
 .items-sell {
   background-color: rgb(223, 247, 255);
   margin: 10px;
   padding: 10px 20px;
+  border-radius: 15px;
 }
 
 .items-none {
@@ -47,6 +71,7 @@ body {
   margin: 10px;
   padding: 10px 20px;
   width: 60vw;
+  border-radius: 15px;
 }
 
 .items {
