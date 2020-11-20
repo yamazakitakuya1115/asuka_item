@@ -6,15 +6,15 @@
 </h1>
 
 <%= form_with(url: search_path, local: true, method: :get, autocomplete: 'off') do |form| %>
-  <%= form.text_field :price, placeholder: "値段入力（半角数字）",class: "item-price", autofocus: true, autocomplete: 'off'%>
+  <%= form.text_field :price, placeholder: "値段入力（半角数字）",class: "item-price", autofocus: true, autocomplete: 'off', maxlength: "6"%>
   <%= form.submit "識別", class: "item-search" %>
 <% end %>
 <div class="item-shikibetsu">
-  <% if @buys.exists? %>
-    <div class="items-buy">
-      <div class="items">
-        <%= "#{@price}ギタンで購入できるアイテム" %>
-      </div>
+  <div class="items-buy">
+    <div class="items">
+      <%= "#{@price}ギタンで購入できるアイテム" %>
+    </div>
+    <% if @buys.exists? %>
       <% @buys.each do |buy| %>
         <div class="item-img">
           <%= image_tag 'kusa.png', class: "item-img" if buy.kind == "kusa" %>
@@ -32,15 +32,17 @@
           <%= buy.name %>
         </div>
       <% end %>
+    <% else %>
+      なし
+    <% end %>
+  </div>
+  <div class="items-sell">
+    <div class="items">
+      <%= "#{@price}ギタンで売却できるアイテム" %>
     </div>
-  <% end %>
-  <% if @sells.exists? %>
-    <div class="items-sell">
-      <div class="items">
-        <%= "#{@price}ギタンで売却できるアイテム" %>
-      </div>
+    <% if @sells.exists? %>
       <% @sells.each do |sell| %>
-      <div>
+        <div>
           <%= image_tag 'kusa.png', class: "item-img" if sell.kind == "kusa" %>
           <%= image_tag 'udewa.png', class: "item-img" if sell.kind == "udewa" %>
           <%= image_tag 'makimono.png', class: "item-img" if sell.kind == "makimono" %>
@@ -53,18 +55,13 @@
           <%= image_tag 'tama.png', class: "item-img" if sell.kind == "tama" %>
           <%= image_tag 'ishi.png', class: "item-img" if sell.kind == "ishi" %>
           <%= image_tag 'fuumaseki.png' if sell.kind == "fuumaseki" %>
-        <%= sell.name %>
-      </div>
+          <%= sell.name %>
+        </div>
       <% end %>
+    <% else %>
+      なし
     <% end %>
   </div>
-  <% if @price != nil && @buys.exists? == false && @sells.exists? == false %>
-    <div class="items-none">
-      <div class="items">
-        <%= "#{@price}ギタンのアイテムはありません" %>
-      </div>
-    </div>
-  <% end %>
 </div>
 <div>
   ※エレキ箱、回路、秘技書は除く
