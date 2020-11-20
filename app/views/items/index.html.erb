@@ -1,2 +1,17 @@
 <h1>Items#index</h1>
 <p>Find me in app/views/items/index.html.erb</p>
+
+<%= form_with(url: search_path, local: true, method: :get ) do |form| %>
+  <%= form.text_field :price, placeholder: "値段検索", autofocus: true, autocomplete: false %>
+    <input type="password" name="dummy2" value="" style="display:none;" disabled>
+  <%= form.submit "検索" %>
+<% end %>
+<div>
+  <% if @items %>
+    <% @items.each do |item| %>
+      <%= item.name %>
+      <%= item.buy %>
+      <%= item.sell%>
+    <% end %>
+  <% end %>
+</div>

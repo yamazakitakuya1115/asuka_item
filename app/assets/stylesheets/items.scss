@@ -1,3 +1,22 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.items-buy {
+  background-color: rgb(255, 214, 221);
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+.items-sell {
+  background-color: rgb(223, 247, 255);
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+.items-none {
+  background-color: lightgray;
+  margin: 20px;
+  padding: 10px 20px;
+}
+
+.items {
+  font-weight: bold;
+  margin-bottom: 10px;
+}

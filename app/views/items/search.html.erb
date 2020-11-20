@@ -1,0 +1,40 @@
+<h1>アスカ見参 値段識別</h1>
+
+<%= form_with(url: search_path, local: true, method: :get, autocomplete: 'off') do |form| %>
+  <%= form.text_field :price, placeholder: "値段検索", autofocus: true, autocomplete: 'off'%>
+  <%= form.submit "検索" %>
+<% end %>
+<div>
+  <% if @buys.exists? %>
+    <div class="items-buy">
+      <div class="items">
+        <%= "#{@price}ギタンで売られているアイテム" %>
+      </div>
+      <% @buys.each do |buy| %>
+        <div>
+          <%= buy.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+  <% if @sells.exists? %>
+    <div class="items-sell">
+      <div class="items">
+        <%= "#{@price}ギタンで売れるアイテム" %>
+      </div>
+      <% @sells.each do |sell| %>
+      <div>
+        <%= sell.name %>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+  <% if @price != nil && @buys.exists? == false && @sells.exists? == false %>
+    <div class="items-none">
+      <div class="items">
+        <%= "#{@price}ギタンのアイテムはありません" %>
+      </div>
+    </div>
+  <% end %>
+</div>
