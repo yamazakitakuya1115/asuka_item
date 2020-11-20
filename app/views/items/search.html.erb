@@ -12,6 +12,18 @@
       </div>
       <% @buys.each do |buy| %>
         <div>
+          <%= "□ " if buy.kind == "kusa" %>
+          <%= "■ " if buy.kind == "udewa" %>
+          <%= "○ " if buy.kind == "makimono" %>
+          <%= "● " if buy.kind == "onigiri" %>
+          <%= "☆ " if buy.kind == "tue" %>
+          <%= "★ " if buy.kind == "tubo" %>
+          <%= "△ " if buy.kind == "buki" %>
+          <%= "▲ " if buy.kind == "tate" %>
+          <%= "▽ " if buy.kind == "ya" %>
+          <%= "▼ " if buy.kind == "tama" %>
+          <%= "＃ " if buy.kind == "ishi" %>
+          <%= "＊ " if buy.kind == "fuumaseki" %>
           <%= buy.name %>
         </div>
       <% end %>
@@ -25,6 +37,18 @@
       </div>
       <% @sells.each do |sell| %>
       <div>
+          <%= "□ " if sell.kind == "kusa" %>
+          <%= "■ " if sell.kind == "udewa" %>
+          <%= "○ " if sell.kind == "makimono" %>
+          <%= "● " if sell.kind == "onigiri" %>
+          <%= "☆ " if sell.kind == "tue" %>
+          <%= "★ " if sell.kind == "tubo" %>
+          <%= "△ " if sell.kind == "buki" %>
+          <%= "▲ " if sell.kind == "tate" %>
+          <%= "▽ " if sell.kind == "ya" %>
+          <%= "▼ " if sell.kind == "tama" %>
+          <%= "＃ " if sell.kind == "ishi" %>
+          <%= "＊ " if sell.kind == "fuumaseki" %>
         <%= sell.name %>
       </div>
       <% end %>
@@ -38,3 +62,5 @@
     </div>
   <% end %>
 </div>
+<div>
+  ※エレキ箱、回路、秘技書は除く
