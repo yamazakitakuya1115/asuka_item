@@ -72,11 +72,11 @@ class Kusa < ActiveHash::Base
     {id: 70, buy: 2000, sell: 1000, kind: "kusa", name: "無敵草"},
     {id: 71, buy: 1800, sell: 900, kind: "kusa", name: "無敵草（呪い）"},
     {id: 72, buy: 2200, sell: 1100, kind: "kusa", name: "無敵草（祝福）"},
-    {id: 67, buy: 2500, sell: 1250, kind: "kusa", name: "復活の草"},
-    {id: 68, buy: 2250, sell: 1125, kind: "kusa", name: "復活の草（呪い）"},
-    {id: 69, buy: 2750, sell: 1375, kind: "kusa", name: "復活の草（祝福）"},
-    {id: 70, buy: 3000, sell: 1500, kind: "kusa", name: "天使の種"},
-    {id: 71, buy: 2700, sell: 1350, kind: "kusa", name: "天使の種（呪い）"},
-    {id: 72, buy: 3300, sell: 1650, kind: "kusa", name:"天使の種（祝福）"}
+    {id: 73, buy: 2500, sell: 1250, kind: "kusa", name: "復活の草"},
+    {id: 74, buy: 2250, sell: 1125, kind: "kusa", name: "復活の草（呪い）"},
+    {id: 75, buy: 2750, sell: 1375, kind: "kusa", name: "復活の草（祝福）"},
+    {id: 76, buy: 3000, sell: 1500, kind: "kusa", name: "天使の種"},
+    {id: 77, buy: 2700, sell: 1350, kind: "kusa", name: "天使の種（呪い）"},
+    {id: 78, buy: 3300, sell: 1650, kind: "kusa", name:"天使の種（祝福）"}
   ]
 end
