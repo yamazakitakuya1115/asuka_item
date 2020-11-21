@@ -21,29 +21,32 @@ class ItemsController < ApplicationController
     @buki_sells = Buki.where(sell: @price)
     @tate_buys = Tate.where(buy: @price)
     @tate_sells = Tate.where(sell: @price)
+
+    # データベースから取得
     # @buys = Item.buy(params[:price].to_i)
     # @sells = Item.sell(params[:price].to_i)
 
-    respond_to do |format|
-      format.html
-      format.csv do |csv|
-        send_items_csv(@items)
-      end
-    end
+    # CSV出力
+    # respond_to do |format|
+    #   format.html
+    #   format.csv do |csv|
+    #     send_items_csv(@items)
+    #   end
+    # end
   end
 
-  def send_items_csv(item)
-    csv_data = CSV.generate do |csv|
-      header = %w(id buy send kind name)
-      csv << header
+  # def send_items_csv(item)
+  #   csv_data = CSV.generate do |csv|
+  #     header = %w(id buy send kind name)
+  #     csv << header
 
-      @items.each do |item|
-        values = [item.id, item.buy, item.sell, item.kind, item.name]
-        csv << values
-      end
+  #     @items.each do |item|
+  #       values = [item.id, item.buy, item.sell, item.kind, item.name]
+  #       csv << values
+  #     end
 
-    end
-    send_data(csv_data, filename: "items.csv")
-  end
+  #   end
+  #   send_data(csv_data, filename: "items.csv")
+  # end
 
 end
