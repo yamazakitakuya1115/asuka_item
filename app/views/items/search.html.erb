@@ -62,6 +62,14 @@
         </div>
       <% end %>
     <% end %>
+    <% if @tate_buys %>
+      <% @tate_buys.each do |buy| %>
+        <div class="item-img">
+          <%= image_tag 'tate.png', class: "item-img"%>
+          <%= buy.name %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
   <div class="items-sell">
     <div class="items">
@@ -111,6 +119,14 @@
       <% @buki_sells.each do |sell| %>
         <div>
           <%= image_tag 'buki.png', class: "item-img" %>
+          <%= sell.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @tate_sells %>
+      <% @tate_sells.each do |sell| %>
+        <div>
+          <%= image_tag 'tate.png', class: "item-img" %>
           <%= sell.name %>
         </div>
       <% end %>

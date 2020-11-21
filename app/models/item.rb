@@ -5,6 +5,7 @@ class Item < ApplicationRecord
   belongs_to :tubo
   belongs_to :makimono
   belongs_to :buki
+  belongs_to :tate
 
   validates :price, format: {with: /\A[0-9]+\z/ }
 

@@ -19,6 +19,8 @@ class ItemsController < ApplicationController
     @makimono_sells = Makimono.where(sell: @price)
     @buki_buys = Buki.where(buy: @price)
     @buki_sells = Buki.where(sell: @price)
+    @tate_buys = Tate.where(buy: @price)
+    @tate_sells = Tate.where(sell: @price)
     # @buys = Item.buy(params[:price].to_i)
     # @sells = Item.sell(params[:price].to_i)
 
