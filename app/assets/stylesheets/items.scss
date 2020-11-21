@@ -1,9 +1,10 @@
 body {
-  padding: 10px 20px;
+  padding: 10px 5px;
   background-image: image-url('asuka.png');
 	background-position: right 0 top 0;
   background-repeat: no-repeat;
   min-height: 400px;
+  font-family: "Arial", "メイリオ";
 }
 
 .title {
@@ -88,6 +89,19 @@ a:hover {
 
 
 
+  .item-search {
+    width: 100px;
+    height: 46px;
+    font-size: 26px;
+    color: white;
+    background-color: rgb(53, 100, 255);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 15px;
+    margin: 10px auto;
+  }
+
 .item-shikibetsu {
   display: inline;
   margin-top: 20px;
@@ -95,22 +109,22 @@ a:hover {
 
 .items-buy {
   background-color: rgb(255, 214, 221);
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px 20px;
   border-radius: 15px;
   width: 80vw;
   opacity: 0.8;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .items-sell {
   background-color: rgb(223, 247, 255);
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px 20px;
   border-radius: 15px;
   width: 80vw;
   opacity: 0.8;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .comment {
