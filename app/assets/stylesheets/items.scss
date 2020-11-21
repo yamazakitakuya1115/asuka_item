@@ -83,3 +83,38 @@ a:hover {
 .link {
   font-weight: bold;
 }
+
+/* タブレット表示時 */
+@media (max-width: 900px) {
+
+
+
+.item-shikibetsu {
+  display: inline;
+  margin-top: 20px;
+}
+
+.items-buy {
+  background-color: rgb(255, 214, 221);
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 80vw;
+  opacity: 0.8;
+  font-size: 24px;
+}
+
+.items-sell {
+  background-color: rgb(223, 247, 255);
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  width: 80vw;
+  opacity: 0.8;
+  font-size: 24px;
+}
+
+.comment {
+  font-size: 20px;
+}
+}
