@@ -30,6 +30,38 @@
         </div>
       <% end %>
     <% end %>
+    <% if @tubo_buys %>
+      <% @tubo_buys.each do |buy| %>
+        <div class="item-img">
+          <%= image_tag 'tubo.png', class: "item-img"%>
+          <%= buy.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @udewa_buys %>
+      <% @udewa_buys.each do |buy| %>
+        <div class="item-img">
+          <%= image_tag 'udewa.png', class: "item-img"%>
+          <%= buy.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @makimono_buys %>
+      <% @makimono_buys.each do |buy| %>
+        <div class="item-img">
+          <%= image_tag 'makimono.png', class: "item-img"%>
+          <%= buy.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @buki_buys %>
+      <% @buki_buys.each do |buy| %>
+        <div class="item-img">
+          <%= image_tag 'buki.png', class: "item-img"%>
+          <%= buy.name %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
   <div class="items-sell">
     <div class="items">
@@ -47,6 +79,38 @@
       <% @tue_sells.each do |sell| %>
         <div>
           <%= image_tag 'tue.png', class: "item-img" %>
+          <%= sell.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @tubo_sells %>
+      <% @tubo_sells.each do |sell| %>
+        <div>
+          <%= image_tag 'tubo.png', class: "item-img" %>
+          <%= sell.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @udewa_sells %>
+      <% @udewa_sells.each do |sell| %>
+        <div>
+          <%= image_tag 'udewa.png', class: "item-img" %>
+          <%= sell.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @makimono_sells %>
+      <% @makimono_sells.each do |sell| %>
+        <div>
+          <%= image_tag 'makimono.png', class: "item-img" %>
+          <%= sell.name %>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @buki_sells %>
+      <% @buki_sells.each do |sell| %>
+        <div>
+          <%= image_tag 'buki.png', class: "item-img" %>
           <%= sell.name %>
         </div>
       <% end %>

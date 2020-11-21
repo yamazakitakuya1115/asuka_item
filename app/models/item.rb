@@ -2,6 +2,9 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :kusa
   belongs_to :tue
+  belongs_to :tubo
+  belongs_to :makimono
+  belongs_to :buki
 
   validates :price, format: {with: /\A[0-9]+\z/ }
 

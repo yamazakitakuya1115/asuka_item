@@ -586,5 +586,4 @@ class Tue < ActiveHash::Base
     {buy: 4590, sell: 2295, kind: "tue", name: "不幸の杖[7]（呪い）"},
     {buy: 5610, sell: 2805, kind: "tue", name: "不幸の杖[7]（祝福）"}
   ]
-
 end

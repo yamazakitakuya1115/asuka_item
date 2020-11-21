@@ -79,5 +79,4 @@ class Kusa < ActiveHash::Base
     {id: 71, buy: 2700, sell: 1350, kind: "kusa", name: "天使の種（呪い）"},
     {id: 72, buy: 3300, sell: 1650, kind: "kusa", name:"天使の種（祝福）"}
   ]
-
 end
