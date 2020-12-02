@@ -6,7 +6,7 @@
 </h1>
 
 <%= form_with(url: search_path, local: true, method: :get, autocomplete: 'off') do |form| %>
-  <%= form.text_field :price, placeholder: "値段入力（半角数字）",class: "item-price", autofocus: true, autocomplete: 'off', maxlength: "5"%>
+  <%= form.text_field :price, placeholder: "値段入力（半角数字）",class: "item-price", autofocus: true, autocomplete: 'off', maxlength: "5", type: 'tel'%>
   <%= form.submit "識別", class: "item-search" %>
 <% end %>
 <div class="item-shikibetsu">
