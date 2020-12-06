@@ -21,10 +21,5 @@ class ItemsController < ApplicationController
     @buki_sells = Buki.where(sell: @price)
     @tate_buys = Tate.where(buy: @price)
     @tate_sells = Tate.where(sell: @price)
-
-    # データベースから取得
-    # @buys = Item.buy(params[:price].to_i)
-    # @sells = Item.sell(params[:price].to_i)
-
   end
 end
