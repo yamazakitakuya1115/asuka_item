@@ -26,13 +26,6 @@ class ItemsController < ApplicationController
     # @buys = Item.buy(params[:price].to_i)
     # @sells = Item.sell(params[:price].to_i)
 
-    # CSV出力
-    # respond_to do |format|
-    #   format.html
-    #   format.csv do |csv|
-    #     send_items_csv(@items)
-    #   end
-    # end
   end
 
   # def send_items_csv(item)
