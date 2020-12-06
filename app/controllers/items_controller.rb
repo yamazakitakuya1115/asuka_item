@@ -27,6 +27,4 @@ class ItemsController < ApplicationController
     # @sells = Item.sell(params[:price].to_i)
 
   end
-
-
 end
