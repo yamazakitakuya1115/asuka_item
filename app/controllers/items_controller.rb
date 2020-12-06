@@ -1,5 +1,3 @@
-require 'csv'
-
 class ItemsController < ApplicationController
   def index
   end
