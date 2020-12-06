@@ -28,18 +28,5 @@ class ItemsController < ApplicationController
 
   end
 
-  # def send_items_csv(item)
-  #   csv_data = CSV.generate do |csv|
-  #     header = %w(id buy send kind name)
-  #     csv << header
-
-  #     @items.each do |item|
-  #       values = [item.id, item.buy, item.sell, item.kind, item.name]
-  #       csv << values
-  #     end
-
-  #   end
-  #   send_data(csv_data, filename: "items.csv")
-  # end
 
 end
