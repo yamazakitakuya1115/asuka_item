@@ -23,7 +23,7 @@ class Buki < ActiveHash::Base
 {buy: 3795, sell: 1898, name: "鍛えた木刀+3（祝福）"},
 {buy: 3600, sell: 1800, name: "鍛えた木刀+4"},
 {buy: 3240, sell: 1620, name: "鍛えた木刀+4（呪い）"},
-{buy: 3960, sell: 1980, name: "鍛えた木刀+（祝福）"},
+{buy: 3960, sell: 1980, name: "鍛えた木刀+4（祝福）"},
 {buy: 3750, sell: 1875, name: "鍛えた木刀+5"},
 {buy: 3375, sell: 1688, name: "鍛えた木刀+5（呪い）"},
 {buy: 4125, sell: 2063, name: "鍛えた木刀+5（祝福）"},
